@@ -1,21 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beling Apartamentos</title>
 </head>
-
 <body>
-    <h1>Beling Apartamentos</h1>
-    <h3>Aluguel de apartamentos</h3>
-    <p>Aqui alugamos apartamentos com preços incríveis e vantagens ainda maiores para sua estadia!</p>
-    <p>Como deseja Prosseguir?</p>
-    <a href="login.html">Já tenho cadastro</a><br>
-    <a href="register.html">Ainda não tenho cadastro</a><br>
-    <a href="contact.html">Gostaia de <strong>entrar em contato</strong> com o time Beling</a><br>
+    <header>
+        <h1>Beling Apartamentos</h1>
+        <nav>
+            <ul>
+                <a href="index.html">Início</a>
+                <a href="realState.html">Nossos Imóveis</a>
+                <a href="contact.html">Contate-nos</a>
+                <a href="register.html">Crie uma conta</a>
+                <a href="login.html">Faça login</a>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h2>Viva com conforto e tranquilidade</h2>
+        <p>Encontre o lugar perfeito para chamar de lar com a Beling Apartamentos.</p>
+        <img src="https://img.freepik.com/fotos-premium/paisagem-urbana-deslumbrante-sala-de-estar-de-luxo-moderna_636537-288598.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagem de destaque">
+        <p><a href="#contato">Agende uma visita</a></p>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios">
+        <h2>Por que escolher a Beling?</h2>
+
+        <article>
+            <h3>Localização privilegiada</h3>
+            <p>Apartamentos em regiões estratégicas, próximos a tudo que você precisa.</p>
+        </article>
+
+        <article>
+            <h3>Conforto e qualidade</h3>
+            <p>Imóveis selecionados com alto padrão de acabamento.</p>
+        </article>
+
+        <article>
+            <h3>Segurança garantida</h3>
+            <p>Ambientes seguros para você e sua família viverem com tranquilidade.</p>
+        </article>
+
+        <article>
+            <h3>Atendimento personalizado</h3>
+            <p>Nossa equipe está pronta para ajudar você em todas as etapas.</p>
+        </article>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre a Beling</h2>
+        <p>
+            A Beling Apartamentos é especializada em locação de imóveis que unem conforto,
+            praticidade e excelente custo-benefício. Nosso compromisso é oferecer
+            a melhor experiência para nossos clientes.
+        </p>
+        <img src="https://www.mtaboca.com.br/PublishingImages/paginas/capacitacao-tecnologica/valores2.jpg" alt="Sobre a empresa">
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+        <h2>O que nossos clientes dizem</h2>
+
+        <article>
+            <p>"Excelente atendimento e apartamentos incríveis!"</p>
+            <p><strong>- Maria Silva</strong></p>
+        </article>
+
+        <article>
+            <p>"Encontrei exatamente o que eu precisava com rapidez."</p>
+            <p><strong>- João Pereira</strong></p>
+        </article>
+
+        <article>
+            <p>"Qualidade e confiança do início ao fim."</p>
+            <p><strong>- Ana Souza</strong></p>
+        </article>
+    </section>
+    <section id="cta">
+        <h2>Pronto para encontrar seu novo lar?</h2>
+        <p>Entre em contato agora e descubra as melhores opções para você.</p>
+        <p><a href="#contato">Fale conosco</a></p>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem"></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p hidden >Email: contato@beling.com</p>
+        <p>Telefone: (27) 4002-8922</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Beling Apartamentos. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
-
 </html>
