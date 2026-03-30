@@ -6,6 +6,32 @@
     <title>Cálculo da Distância entre pontos do plano cartesiano</title>
 </head>
 <body>
-    
+    <h1>Como obtive o resultado?</h1>
+    <h2>1° Passo:</h2>
+    <p>Receber e armazenar os pontos pelo input</p>
+    <h2>2° Passo:</h2>
+    <p>Determinar as fórmulas para cálculo da distância</p>
+    <h2>3° Passo:</h2>
+    <p>Aplicar a fórmula para obter o resultado</p>
+    <h2>4° Passo:</h2>
+    <p>Exibir o resultado</p>
+    <script>
+        // 1. Recolhendo valores dos pontos (abscissas e ordenadas)
+        var abs1 = Number(prompt("Informe a abscissa (X) do ponto A."))
+        var ord1 = Number(prompt("Informe a ordenada (Y) do ponto A."))
+        var abs2 = Number(prompt("Informe a abscissa (X) do ponto B."))
+        var ord2 = Number(prompt("Informe a ordenada (Y) do ponto B."))
+        var pA = "("+abs1+","+ord1+")"
+        var pB = "("+abs2+","+ord2+")"
+        // 2. Definindo fórmulas para cálculo da distância
+        /*A distância entre os as abscissas e ordenadas formam retas, logo os catetos de um triângulo
+        retângulo. Utilizando pitágoras, calcula-se a distância entre os pontos com base nessas retas.*/
+        var cateto1 = abs1 - abs2 
+        var cateto2 = ord1 - ord2
+        // 3. Utilizar valores para chegar no valor da distância
+        var distancia = Math.sqrt(cateto1 ** 2 + cateto2 ** 2)
+        // 4. Exibir resultado
+        alert("A distância entre pA" + pA + "e pB" + pB + " é " + distancia.toFixed(2) + " unidades.")
+    </script>
 </body>
 </html>

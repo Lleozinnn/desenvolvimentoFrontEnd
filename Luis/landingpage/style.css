@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background: #45a049;
+}
+
+/* BLOCO 1 */
+.hero {
+  background: #f4f4f4;
+}
+
+.hero img {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+/* BLOCO 2 */
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.benefit {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* BLOCO 3 */
+.testimonials {
+  background: #f9f9f9;
+}
+
+.testimonial {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.stars {
+  color: gold;
+  font-size: 20px;
+}
+
+/* BLOCO 4 */
+.form-container input {
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  max-width: 90%;
+}

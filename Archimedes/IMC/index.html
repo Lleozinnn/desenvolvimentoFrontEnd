@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do IMC</title>
+</head>
+
+<body>
+    <h1>Como calcular o IMC?</h1>
+    <h2>1° Passo:</h2>
+    <p>Receber e armazenar dados como altura e peso pelo input</p>
+    <h2>2° Passo:</h2>
+    <p>Aplicar a fórmula para obter o resultado</p>
+    <h2>3° Passo:</h2>
+    <p>Exibir o resultado numerico na tela</p>
+    <script>
+        // 1. Recolhendo valores de altura e peso
+        var altura = Number(prompt("Informe a altura em metros."))
+        var peso = Number(prompt("Informe o peso em kg."))
+        // 2. Defininfo a formula de cálculo do IMC
+        /*O imc é calculado dividindo-se o peso da pesoa pelo quadrado de sua altura.*/
+        var imc = peso / (altura ** 2)
+        // 3. Exibindo IMC na tela
+        alert("O seu IMC é " + imc.toFixed(2) + ".")
+    </script>
+</body>
+
+</html>
