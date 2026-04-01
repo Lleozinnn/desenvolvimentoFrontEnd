@@ -17,7 +17,8 @@
             </ul>
         </nav>
     </header>
-    <section id="hero">
+    <main>
+        <section id="hero">
         <h2>Viva com conforto e tranquilidade</h2>
         <p>Encontre o lugar perfeito para chamar de lar com a Beling Apartamentos.</p>
         <img src="https://img.freepik.com/fotos-premium/paisagem-urbana-deslumbrante-sala-de-estar-de-luxo-moderna_636537-288598.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagem de destaque">
@@ -89,23 +90,25 @@
 
         <form>
             <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome"><br><br>
+            <input type="text" id="nome" name="nome" required minlength="5"
+            oninvalid="this.setCustomValidity('Por favor, insira seu nome.')" oninput="this.setCustomValidity('')"><br><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" id="email" name="email" required minlength="7"
+            oninvalid="this.setCustomValidity('Insira um email válido.')" oninput="this.setCustomValidity('')"><br><br>
 
             <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem"></textarea><br><br>
+            <textarea id="mensagem" name="mensagem" required minlength="10"
+            oninvalid="this.setCustomValidity('Escreva sua mensagem.')" oninput="this.setCustomValidity('')"></textarea><br><br>
 
             <button type="submit">Enviar</button>
         </form>
-
-        <p hidden >Email: contato@beling.com</p>
-        <p>Telefone: (27) 4002-8922</p>
+        <br>
+        <a href="contact.html">Contate-nos</a>
     </section>
-
+    </main>
     <footer>
-        <p>&copy; 2026 Beling Apartamentos. Todos os direitos reservados.</p>
+        <p>© 2026 Beling Apartamentos. Todos os direitos reservados.</p>
     </footer>
 
 </body>
