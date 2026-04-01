@@ -39,13 +39,43 @@
         <input id="email" type="email" placeholder="Digite seu E-mail" required>
         <br>
         <label for="telefone">Telefone:</label>
-        <input type="tel" placeholder="Digite seu telefone">
+        <input id="telefone" type="tel" placeholder="Digite seu telefone" required>
         <br>
         <label for="nascimento">Data de nascimento:</label>
-        <input type="date" placeholder="Digite seu nascimento">
+        <input id="nascimento" type="date" placeholder="Digite seu nascimento">
         <br>
         <label for="senha">Senha:</label>
-        <input type="password" placeholder="Crie uma senha forte">
+        <input id="senha" type="password" placeholder="Crie uma senha forte">
+        <br>
+        <label for="genero">Gênero:</label>
+         <input type="radio" name="genero" id="masculino" value="Masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="feminino" value="Feminino">
+        <label for="feminino">Feminino</label>
+        <br>
+        <label for="numSecreto">Numero secreto:</label>
+        <select name="numSecreto" id="numSecreto">
+            <option value="123">123</option>
+            <option value="456">456</option>
+            <option value="789">789</option>
+            <option value="012">012</option>
+            <option value="345">345</option>
+        </select>
+        <br>
+        <label for="termos">Aceite os termos a seguir:</label>
+        <br>
+        <input type="checkbox" name="termos" id="termo1">
+        <label for="termo1">Aceito ter meus dados armazenados durante o uso do serviço</label>
+        <br>
+        <input type="checkbox" name="termos" id="termo2">
+        <label for="termo2">Aceito os termos e condições desse site</label>
+        <br>
+        <input type="checkbox" name="termos" id="termo3">
+        <label for="termo3">Aceito receber comunicações sobre novidades e ofertas</label>
+        <br>
+        <label for="obs">Observações sobre meu cadastro (caso houver):</label>
+        <br>
+        <textarea name="obs" id="obs">Sem demais observações</textarea>
         <br>
         <input type="submit" value="Efetuar Cadastro">
         <a href="login.html">Já tenho a conta Beling</a>
