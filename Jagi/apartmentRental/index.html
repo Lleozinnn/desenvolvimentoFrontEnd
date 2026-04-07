@@ -20,10 +20,16 @@
     <section id="hero">
         <h2>Viva com conforto e tranquilidade</h2>
         <p>Encontre o lugar perfeito para chamar de lar com a Beling Apartamentos.</p>
+        <form action="#">
+            <select name="localidade" id="localidade">
+                <option value="Santa Teresa">Santa Teresa</option>
+                <option value="Santa Maria de Jetibá" selected>Santa Maria de Jetibá</option>
+            </select>
+            <input type="text" placeholder="Busque por cômodos">
+            <input type="submit" value="Buscar">
+        </form>
         <img src="https://img.freepik.com/fotos-premium/paisagem-urbana-deslumbrante-sala-de-estar-de-luxo-moderna_636537-288598.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagem de destaque">
-        <p><a href="#contato">Agende uma visita</a></p>
     </section>
-
     <!-- Benefícios -->
     <section id="beneficios">
         <h2>Por que escolher a Beling?</h2>
@@ -82,28 +88,8 @@
     <section id="cta">
         <h2>Pronto para encontrar seu novo lar?</h2>
         <p>Entre em contato agora e descubra as melhores opções para você.</p>
-        <p><a href="#contato">Fale conosco</a></p>
+        <p><a href="contact.html">Fale conosco</a></p>
     </section>
-    <section id="contato">
-        <h2>Contato</h2>
-
-        <form>
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome"><br><br>
-
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem"></textarea><br><br>
-
-            <button type="submit">Enviar</button>
-        </form>
-
-        <p hidden >Email: contato@beling.com</p>
-        <p>Telefone: (27) 4002-8922</p>
-    </section>
-
     <footer>
         <p>&copy; 2026 Beling Apartamentos. Todos os direitos reservados.</p>
     </footer>
