@@ -9,7 +9,7 @@ function totalizarConta () {
     var valorConta = Number(inValorConta.value);
     var taxaGarcom = valorConta * 0.1
     var totalConta = valorConta + taxaGarcom
-    outTotalConta.innerHTML = "Taxa do garçom: R$ " + taxaGarcom.toFixed(2) +
-    "<br> Total da conta: R$ " + totalConta.toFixed(2)
+    outTotalConta.innerHTML = "Taxa do garçom => R$ " + taxaGarcom.toFixed(2) +
+    "<br> Total da conta => R$ " + totalConta.toFixed(2)
     
 }

@@ -17,7 +17,8 @@
             </ul>
         </nav>
     </header>
-    <section id="hero">
+    <main>
+        <section id="hero">
         <h2>Viva com conforto e tranquilidade</h2>
         <p>Encontre o lugar perfeito para chamar de lar com a Beling Apartamentos.</p>
         <form action="#">
@@ -90,8 +91,33 @@
         <p>Entre em contato agora e descubra as melhores opções para você.</p>
         <p><a href="contact.html">Fale conosco</a></p>
     </section>
+<<<<<<< HEAD
+=======
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required minlength="5"
+            oninvalid="this.setCustomValidity('Por favor, insira seu nome.')" oninput="this.setCustomValidity('')"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required minlength="7"
+            oninvalid="this.setCustomValidity('Insira um email válido.')" oninput="this.setCustomValidity('')"><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" required minlength="10"
+            oninvalid="this.setCustomValidity('Escreva sua mensagem.')" oninput="this.setCustomValidity('')"></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <br>
+        <a href="contact.html">Contate-nos</a>
+    </section>
+    </main>
+>>>>>>> 6aaac87f1b09bf4646777020956ec6c32e9220bd
     <footer>
-        <p>&copy; 2026 Beling Apartamentos. Todos os direitos reservados.</p>
+        <p>© 2026 Beling Apartamentos. Todos os direitos reservados.</p>
     </footer>
 
 </body>
