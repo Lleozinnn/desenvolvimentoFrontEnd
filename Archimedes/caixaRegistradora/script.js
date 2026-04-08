@@ -19,6 +19,12 @@ function calcular () {
     inPrice.value = "";
     inQuantity.value = "";
     inPrice.focus();
+    if (inPrice.value <= 0 || inPrice > 0) {
+        alert("O campo preço não foi preenchido ou não contem o valor correto")
+    }
+    if (inQuantity.value <= 0 || inQuantity > 0) {
+        alert("O campo quantidade não foi preenchido ou não contem o valor correto")
+    }
 };
 function redefinir() {
     console.log("Redefinindo...")
