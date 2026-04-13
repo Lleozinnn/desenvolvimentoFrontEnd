@@ -2,13 +2,13 @@
 const inTimeA = document.getElementById("inGolsA");
 const inTimeB = document.getElementById("inGolsB");
 const btResult = document.getElementById("btResult");
-const outresult = document.getElementById("outResult");
+const outResult = document.getElementById("outResult");
 
 // PASSO 2: Criar função
 function processarResultado () {
     // Variáveis de controle
-    var resultado = ""
-    var diferenca = 0
+    var resultado = "";
+    var diferenca = 0;
     // Receber valores
     var golA = Number(inTimeA.value);
     var golB = Number(inTimeB.value);
@@ -19,28 +19,28 @@ function processarResultado () {
     else {
         var diferenca = 0
         if (golA > golB) {
-            diferenca = golA - golB
+            diferenca = golA - golB;
             if (diferenca >= 2) {
-                resultado = "Time A venceu de goleada."
+                resultado = "Time A venceu de goleada.";
             }
             else {
-                resultado = "Time A venceu."
+                resultado = "Time A venceu.";
             }
         }
         else if (golB > golA) {
             diferenca = golB - golA
             if (diferenca >= 2) {
-                resultado = "Time B venceu de goleada."
+                resultado = "Time B venceu de goleada.";
             }
             else {
-                resultado = "Time B venceu."
+                resultado = "Time B venceu.";
             }
         }
         else {
-            resultado = "Houve empate!"
+            resultado = "Houve empate!";
         }
     }
-    outResult.textContent = resultado
+    outResult.textContent = resultado;
 }
 // PASSO 3: Associar escuta de evento à função que processa o resultado
-btResult.addEventListener("click", processarResultado)
+btResult.addEventListener("click", processarResultado);
