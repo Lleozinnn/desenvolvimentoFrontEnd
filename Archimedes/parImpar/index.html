@@ -13,16 +13,16 @@
         <li>Soma um ponto a cada acerto de palpite</li>
         <li>Decrementa 1 ponto a cada erro de palpite</li>
         <li>Se acertar 3 vezes consecutivas, os pontos adquiridos nas ultimas 3 rodadas serção <strong>multiplicados por 2</strong></li>
-        <li>Se errar 3 vezes consecutivas, sua banca de pontos <strong>será cortada pela metade</strong> (ou pela metade +1 caso tenha uma banca de pontos impar)</li>
+        <li>Se errar 3 vezes consecutivas, sua banca de pontos <strong>será cortada pela metade</strong> (Em caso de banca impar, cortaremos a banca pela metade e faremos o arredondamento do resultado para cima)</li>
     </ol>
     <h2>Agora Vamos ao palpite</h2>
     <label for="nome">Qual é o seu nome?</label>
     <input type="text" placeholder="Digite seu nome." id="inNome">
     <br>
     <label for="palpite">Dê o seu palpite:</label>
-    <input type="radio" id="rbImpar">
+    <input type="radio" id="rbImpar" name="parImpar">
     <label for="rbImpar">Impar</label>
-    <input type="radio" id="rbPar">
+    <input type="radio" id="rbPar" name="parImpar">
     <label for="rbPar">Par</label>
     <button id="btJogar">Jogar agora!</button>
     <h1 id="outResult"></h1>
