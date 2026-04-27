@@ -14,11 +14,13 @@ function calcular () {
     let pesoMenor, pesoMaior, pesoMedio
     if (peso == 0) {
         alert("O campo peso não foi preenchido");
+        inPeso.focus();
     }
     else {
         pesos += peso;
-        pesoMenor = Math.min(pesos)
-        pesoMaior = Math.max(pesos)
+        pesoMenor = Math.min(pesos);
+        pesoMaior = Math.max(pesos);
+        
         // pesoMedio = Math.
         // Continuar daqui.
     }
