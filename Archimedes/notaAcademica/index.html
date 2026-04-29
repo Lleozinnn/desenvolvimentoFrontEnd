@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de notas acadêmicas</title>
+</head>
+<body>
+    <h1>Sistemas de Notas Acadêmicas</h1>
+    <h2>Sobre o sistema</h2>
+    <ol>
+        <li>O aluno pode ser <strong>reprovado se obtiver 25% de faltas.</strong></li>
+        <li>O aluno pode ser <strong>reprovado se possuir nota insuficiente, abaixo de 60.</strong></li>
+        <li>A carga horária de cada disciplina é de <strong>120h</strong></li>
+    </ol>
+    <h2>Agora Vamos aos dados</h2>
+    <label for="nome">Nome do aluno:</label>
+    <input type="text" placeholder="Digite seu nome." id="inNome">
+    <br>
+    <label for="inNota1">Digite a primeira nota parcial:</label>
+    <input type="number" name="nota1" id="inNota1"><br>
+    <label for="inNota2">Digite a segunda nota parcial:</label>
+    <input type="number" name="nota2" id="inNota2"><br>
+    <label for="faltas">Digite a quantidade de faltas:</label>
+    <input type="number" name="faltas" id="inFaltas"><br>
+    <button id="btVerificar">Verificar situação do aluno</button>
+    <h3 id="outConceitoAluno"></h3>
+    <h3 id="outPercentualFaltas"></h3>
+    <h3 id="outRelatorio"></h3>
+    <script src="script.js"></script>
+</body>
+</html>
