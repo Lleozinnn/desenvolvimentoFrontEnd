@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de notas acadêmicas</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    
+    <label for="inOperando1">1° Operando:</label>
+    <input type="number" name="operando1" id="inOperando1"><br>
+    <label for="nome">Operação:</label>
+    <select name="operacao" id="sltOperacao">
+        <option value="soma">+</option>
+        <option value="subtracao">-</option>
+        <option value="multiplicacao">*</option>
+        <option value="divisao">/</option>
+        <option value="potenciacao">^</option>
+        <option value="raiz">SQRT</option>
+    </select>
+    <br>
+    <label for="inOperando2">2° Operando:</label>
+    <input type="number" name="operando2" id="inOperando2"><br>
+    <button id="btCalcular">Calcular</button>
+    <button id="btLimpar">Limpar</button>
+    <h3 id="outResultado"></h3>
+    <script src="script.js"></script>
+</body>
+</html>
