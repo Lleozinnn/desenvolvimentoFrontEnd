@@ -62,6 +62,6 @@ function limpar () {
     inOperando1.value = ""
     inOperando2.value = ""
     sltOperacao.value = "soma"
-    outResultado.innerHTML = "Começe a somar seus números favoritos."
+    outResultado.innerHTML = ""
     inOperando1.focus()
 }
