@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de notas acadêmicas</title>
+</head>
+<body>
+    <h1>Supermercado Compre Mais</h1>
+    
+    <label for="inQuantidade">Quantidade</label>
+    <input type="number" name="quantidade" id="inQuantidade"><br>
+    <label for="nome">Operação:</label>
+    <select name="setor" id="sltSetor">
+        <option value="bebidas">Bebidas</option>
+        <option value="laticinios">Laticínios</option>
+        <option value="frutas">Frutas</option>
+        <option value="outros">Outros</option>
+    </select>
+    <br>
+    <label for="inPreço">Preço unitário</label>
+    <input type="number" name="preco" id="inPreco"><br>
+    <button id="btCalcular">Calcular</button>
+    <h3 id="outResultado"></h3>
+    <script src="script.js"></script>
+</body>
+</html>
