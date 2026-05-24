@@ -7,20 +7,25 @@ const btCalcular = document.getElementById("btCalcular");
 btCalcular.addEventListener("click", calcular);
 
 // Função que realiza o cálculo do fatorial
-function calcular () {
+function calcular() {
     let numero = Number(inNumero.value);
     let fatorial, restante;
 
-    if (Number.isInteger(numero) && numero > 0) {
-        restante = numero;
-        while (restante !== 1) {
-            if (restante == numero) {
-                fatorial = restante * (restante - 1);
+    if (Number.isInteger(numero) && numero >= 0) {
+        if (numero == 0 || numero == 1) {
+            fatorial = 1
+        }
+        else {
+            restante = numero;
+            while (restante !== 1) {
+                if (restante == numero) {
+                    fatorial = restante * (restante - 1);
+                }
+                else {
+                    fatorial *= (restante - 1)
+                }
+                restante--
             }
-            else {
-                fatorial *= (restante - 1)
-            }
-            restante--
         }
         outResultado.innerHTML = "O resultado é: " + fatorial;
     }
