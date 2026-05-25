@@ -10,7 +10,6 @@ btCalcular.addEventListener("click", calcular);
 function calcular() {
     let numero = Number(inNumero.value);
     let fatorial, restante;
-
     if (Number.isInteger(numero) && numero >= 0) {
         if (numero == 0 || numero == 1) {
             fatorial = 1
