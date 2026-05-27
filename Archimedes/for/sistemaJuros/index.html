@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Empréstimos</title>
+</head>
+<body>
+    <h1>Leozinnn Emprest</h1>
+    <p>Empréstimos excepcionais com taxas a partr de 5%</p>
+    <label for="inValor">Qual valor precisa?</label>
+    <input type="number" id="inValor" required><br><br>
+    <button id="btCalcular">Calcular</button>
+    <button id="btLimpar">Limpar</button>
+    <table>
+        <thead>
+           <tr>
+            <th>Parcela</th>
+            <th>Valor devido</th>
+            <th>% de juros</th>
+            <th>Juros</th>
+            <th>Valor da parcela</th>
+           </tr> 
+        </thead>
+        <tbody id="corpoTabela"></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
