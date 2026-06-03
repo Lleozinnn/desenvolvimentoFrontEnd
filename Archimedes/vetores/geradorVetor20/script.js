@@ -10,7 +10,7 @@ function gerar () {
     let elementos = Number(inElementos.value);
 
     if (inElementos.value == "") {
-        alert(`Digite o número de elementos que deve conter no array`)
+        alert(`Digite o número de elementos que deve conter no array`);
         inElementos.focus();
     }
     else if ( !Number.isInteger(elementos)) {
@@ -47,7 +47,7 @@ function gerar () {
             }
             media += numero;
         }
-        media /= elementos
+        media /= elementos;
         // Com o vetor montado, exibe-o na tela
         outSaida.innerHTML = `
         A média dos numeros do vetor é: ${media.toFixed(1)} <br>

@@ -12,14 +12,15 @@ const outSaida = document.querySelector("#outSaida");
 btnExibir.addEventListener("click", exibir);
 btnMedia.addEventListener("click", media);
 btnRegistrar.addEventListener("click", registrar);
-btnMaiorNota.addEventListener("click", exibirMaiorNota)
-inNotaMax.addEventListener("focusout", definirNotaMax)
-inNotaMax.addEventListener("click", redefinirNotaMax)
+btnMaiorNota.addEventListener("click", exibirMaiorNota);
+btnRedefinir.addEventListener("click", definirNotaMax);
+btnMaioresMedias.addEventListener("click", acimaMedia);
 // Funções de cálculo e exibição
 let vetNotas = [];
 let notaMax = 0;
-inNota.disabled = true
-// Função 1: Cadastrar notas
+
+
+// Função 1: Cadastrar notas.
 function registrar () {
     let nota = Number(inNota.value);
     if (inNota.value == "") {
@@ -27,16 +28,27 @@ function registrar () {
         inNota.focus();
     }
     else if (nota > notaMax || nota < 0) {
-        alert(`A nota a ser cadastrada deve estar no intervalo entre 0 e ${notaMax}`)
+        alert(`A nota a ser cadastrada deve estar no intervalo entre 0 e ${notaMax}`);
+        inNota.focus();
     }
     else {
         vetNotas.push(nota);
         inNota.value = "";
-        outSaida.innerHTML = `A nota ${nota} foi cadastrada com sucesso.`
+        outSaida.innerHTML = `A nota ${nota} foi cadastrada com sucesso.`;
         inNota.focus();
     }
+    switch (vetNotas.length) {
+        case 1:
+            btnMaiorNota.disabled = false;
+            btnExibir.disabled = false;
+            break;
+        case 2:
+            btnMaioresMedias.disabled = false;
+            btnMedia.disabled = false;
+            break;
+    }
 }
-// Função 2: Calcular média
+// Função 2: Calcular média.
 function media () {
     if (vetNotas.length < 2) {
         alert(`Registre pelo menos 2 notas para calcular a média.`);
@@ -52,17 +64,17 @@ function media () {
         outSaida.innerHTML = `A média das ${vetNotas.length} notas registradas é ${mediaNotas.toFixed(1)}`;
     }
 }
-// Função 3: Exibir notas
+// Função 3: Exibir notas.
 function exibir () {
     if (vetNotas.length == 0) {
-        alert(`Não há notas cadastradas ainda. Cadastre um nova nota.`)
-        inNota.focus()
+        alert(`Não há notas cadastradas ainda. Cadastre um nova nota.`);
+        inNota.focus();
     }
     else {
-        outSaida.innerHTML = `As notas cadastradas até agora foram: ${vetNotas.join(", ")}`
+        outSaida.innerHTML = `As notas cadastradas até agora foram: ${vetNotas.join(", ")}`;
     }
 }
-// Função 4: Exibir maior nota
+// Função 4: Exibir notas acima da média.
 function exibirMaiorNota () {
     let maior = 0;
     for (let index = 0; index < vetNotas.length; index++) {
@@ -71,28 +83,44 @@ function exibirMaiorNota () {
     }
     outSaida.innerHTML = `A maior nota registrada foi ${maior}.`;
 }
-// Função 4: Exibir maior nota
+// Função 5: Preparar sistema para receber notas.
 function definirNotaMax () {
-    let notaMax = Number(inNotaMax.value)
+    notaMax = Number(inNotaMax.value);
     if (inNotaMax.value == "" || notaMax <= 0) {
         inNota.disabled = true;
-        alert("Para registrar notas, defina anota máxima maior que zero.");
+        alert("Digite a nota máxima. O valor deste campo deve ser superior a 0.");
+        inNotaMax.focus();
     }
     else {
-        notaMax = inNotaMax.value;
-        inNota.disabled = false;
-        inNotaMax.disabled = true;
-        vetNotas = [];
+        if (inNotaMax.disabled) {
+            btnRedefinir.innerHTML = "Definir Nota Máxima";
+            outSaida.innerHTML = "";
+            inNota.value = "";
+            inNotaMax.disabled = false;
+            btnRegistrar.disabled = true;
+            inNota.disabled = true;
+            btnMaiorNota.disabled = true;
+            btnExibir.disabled = true;
+            btnMaioresMedias.disabled = true;
+            btnMedia.disabled = true;
+        }
+        else {
+            btnRedefinir.innerHTML = "Redefinir Nota Máxima";
+            outSaida.innerHTML = "Sistema pronto para receber novas notas.";
+            inNotaMax.disabled = true;
+            btnRegistrar.disabled = false;
+            inNota.disabled = false;
+            vetNotas = [];
+        }
     }
 }
-// Função 5: Redefinir nota
-function redefinirNotaMax () {
-    if (inNotaMax.disabled == true) {
-        inNotaMax.disabled = false;
-        inNota.disabled = true;
+// Função 6: Exibir notas acima da média.
+function acimaMedia () {
+    let acima = 0;
+    for (let index = 0; index < vetNotas.length; index++) {
+        if (vetNotas[index] >= (0.6 * notaMax)) {
+            acima++;
+        }
     }
-    else {
-        definirNotaMax()
-        // Rever essa parte.
-    }
+    outSaida.innerHTML = `Das ${vetNotas.length} notas registradas, ${vetNotas.length - acima} estão abaixo da média e ${acima} estão acima da média.`;
 }
