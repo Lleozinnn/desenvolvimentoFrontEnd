@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Detalhes</title>
+</head>
+<body>
+    <button id="btNavegar">Ir para o início</button>
+    <script>
+        const btNavegar = document.querySelector("#btNavegar");
+        btNavegar.addEventListener("click", navegar)
+        function navegar () {
+            const params = new URLSearchParams({
+                id: "123456",
+                origem: "Pagina de Detalhes"
+            })
+            window.location.href = `index.html?${params.toString()}`
+        }
+    </script>
+</body>
+</html>
